@@ -1,1 +1,1 @@
-web: gunicorn profileapi.wsgi
+web: gunicorn main:app
