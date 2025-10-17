@@ -25,4 +25,5 @@ RUN python manage.py collectstatic --noinput || true
 EXPOSE 8080
 
 # Start server
+ENV DJANGO_SETTINGS_MODULE = profileapi.profileapi.settings
 CMD ["gunicorn", "profileapi.profileapi.wsgi:application", "--bind", "0.0.0.0:8080"]
